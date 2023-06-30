@@ -8,9 +8,9 @@ import MemoryGame from "./Pages/MemoryGame/MemoryGame";
 function App() {
   return (
     <div>
-     {/* <HomePage/> */}
+     <HomePage/>
      {/* <TicTacToe/> */}
-     <MemoryGame/>
+     {/* <MemoryGame/> */}
     </div>
   );
 }
