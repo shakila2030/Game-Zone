@@ -6,15 +6,17 @@ import TicTacToe from "./Pages/TicTacToe/TicTacToe";
 import MemoryGame from "./Pages/MemoryGame/MemoryGame";
 
 import JumpRun from "./Pages/JumpyRunGame/JumpRun";
+import FallingBallGame from "./Pages/FallingBallGame/FallingBallGame";
 
 function App() {
   return (
     <div>
-     <HomePage/>
+     {/* <HomePage/> */}
      {/* <TicTacToe/> */}
      {/* <MemoryGame/> */}
 
      {/* <JumpRun/> */}
+     <FallingBallGame/>
     </div>
   );
 }
