@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import Square from "./Square";
-import './TicTacToe.css';
+import  './TicTacToe.css';
 
 
 export default function TicTacToe() {
@@ -78,3 +78,7 @@ function calculateWinner(squares) {
   }
   return null;
 }
+
+
+
+

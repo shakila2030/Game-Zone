@@ -31,7 +31,7 @@ function HomePage() {
         width: "100%",
         height: "100vh",
         backgroundImage: `url(${wallpaper})`,
-        backgroundSize: "100% 100%",
+       
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
