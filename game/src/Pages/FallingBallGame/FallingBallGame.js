@@ -26,24 +26,27 @@ export default function FallingBallGame() {
 
   const moveLeft = () => {
     if (leftPosition > 0) {
-      setLeftPosition((prevPosition) => prevPosition - 2);
+      setLeftPosition((prevPosition) => prevPosition - 10);
     }
   };
 
   const moveRight = () => {
     if (leftPosition < 380) {
-      setLeftPosition((prevPosition) => prevPosition + 2);
+      setLeftPosition((prevPosition) => prevPosition + 10);
     }
   };
 
   const moveBlocks = () => {
     setBlockPosition((prevPosition) => {
-      const updatedTop = prevPosition.top - 2;
+      const updatedTop = prevPosition.top - 1;
 
       if (updatedTop < -20) {
         const newTop = Math.floor(Math.random() * 100) + 400;
         const newHoleLeft = Math.floor(Math.random() * 360);
-        setScore((prevScore) => prevScore + 1);
+        if(newHoleLeft===leftPosition){
+          setScore((prevScore) => prevScore + 1);
+        }
+        //setScore((prevScore) => prevScore + 1);
         return { top: newTop, holeLeft: newHoleLeft };
       }
 

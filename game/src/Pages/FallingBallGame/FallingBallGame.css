@@ -10,12 +10,12 @@
     overflow: hidden;
   }
   .character{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background-color: red;
     border-radius: 50%;
     position: relative;
-    top: 400px;
+    top: 200px;
     left: 190px;
     z-index: 1000000;
   }
@@ -28,7 +28,7 @@
     margin-top: -20px;
   }
   .hole{
-    width: 40px;
+    width: 60px;
     height: 20px;
     background-color: white;
     position: relative;
