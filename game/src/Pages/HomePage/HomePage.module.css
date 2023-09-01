@@ -1,11 +1,16 @@
-
+/* 
 .imagecontainer {
-    position: relative; /* Position the container */
-    width: 100%;
-    height: 100%;
+  
+    background-image: url('../../images/wallpaper.png');
     overflow: hidden; /* Hide any overflow */
-    object-fit:cover;
-  }
+    /* object-fit:cover;
+    margin-top: 0;
+  padding: 260px 0 100px 0;
+  
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  } */ 
   
 
   
@@ -14,7 +19,7 @@
     height: auto;
   }
   
-  .buttonContainer {
+  /* .buttonContainer {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,4 +27,167 @@
     margin-top: 300px;
     display: flex;
     ;
+  } */
+
+  h1 {
+    color: hsl(0, 0%, 28%);
+    font-size: 100px!important;
+    font-weight: bold!important;
+    font-family: monospace;
+    letter-spacing: 7px!important;
+    cursor: pointer;
+    text-transform: uppercase;
   }
+  
+  h1 {
+    padding: 64px;
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    60% {
+      background-position: 600px;
+    }
+    100% {
+      background-position: 1000px;
+    }
+  }
+
+
+  .animatedButton {
+    /* position: absolute; */
+  width: 220px;
+    height: 100px;
+    box-shadow: 16px 14px 20px  ;
+    border-radius: 10px;
+    position: relative; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  
+  .animatedButton::before {
+    content:"";
+    background-image: conic-gradient(
+   white 20deg, transparent 120deg
+    );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+    
+  }
+  
+  .animatedButton::after {
+    content: "GET STARTED";
+    width: 210px;
+    height: 90px;
+    background:#045462;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: inset 20px 20px 20px #045462;
+    
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Button:hover {
+    color: white;
+   
+  }
+  
+  Button span {
+    display: block;
+    position: absolute;
+    /* background: rgba(255, 255, 255, 0.904);
+  } */
+  
+  /* Button span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s;
+  }
+  
+  Button:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+  }
+  
+  Button span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+  }
+ Button:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s;
+  }
+  
+  Button span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+  }
+ Button:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+  }
+  
+ Button span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+  }
+  
+ Button:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+  } */
+  
+  

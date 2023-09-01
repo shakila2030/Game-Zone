@@ -28,7 +28,8 @@ function App() {
     
 
       <main className={styles.main}> */}
-        <TicTacToe />
+        {/* <TicTacToe /> */}
+        <HomePage/>
       {/* </main> */}
     </div>
   );
