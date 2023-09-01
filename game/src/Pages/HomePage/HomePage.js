@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HomePage.module.css";
-import wallpaper from "../../images/wallpaper.png";
+import wallpaper from "../../images/i.jpeg";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 import LoginIcon from "@mui/icons-material/Login";
 import Button from "@mui/material/Button";
@@ -10,33 +10,52 @@ import { useState } from "react";
 function HomePage() {
 
 
-  const [hoveredButton, setHoveredButton] = useState(null);
+  // const [hoveredButton, setHoveredButton] = useState(null);
 
-  const handleMouseEnter = (buttonName) => {
-    setHoveredButton(buttonName);
-  };
+  // const handleMouseEnter = (buttonName) => {
+  //   setHoveredButton(buttonName);
+  // };
 
-  const handleMouseLeave = () => {
-    setHoveredButton(null);
-  };
+  // const handleMouseLeave = () => {
+  //   setHoveredButton(null);
+  // };
 
-  const isButtonHovered = (buttonName) => {
-    return hoveredButton === buttonName;
-  };
+  // const isButtonHovered = (buttonName) => {
+  //   return hoveredButton === buttonName;
+  // };
 
   return (
     <div
       className={styles.imageContainer}
       style={{
-        width: "100%",
-        height: "100vh",
+        // width: "100%", 
+        // height: "100%",
         backgroundImage: `url(${wallpaper})`,
-       
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        marginTop: '0',
+         padding: '0 0 800px 0',
+        backgroundPosition: 'top center', 
+        backgroundSize: 'cover',
+         backgroundRepeat: 'no-repeat',
+    
       }}
     >
-      <div className={styles.buttonContainer}>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <h1>game zone</h1>
+<div style={{
+          display: "flex",
+          justifyContent: "center", // Center horizontally
+          alignItems: "center", // Center vertically
+          marginTop: "-30px",
+          // height: "100vh", // Adjust the height as needed
+        }}>
+<div className={styles.animatedButton} >
+</div></div>
+ 
+      {/* <div className={styles.buttonContainer}>
         <Button
           style={{
             color: "white",
@@ -84,7 +103,7 @@ function HomePage() {
         >
           Play as Guest
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 }
