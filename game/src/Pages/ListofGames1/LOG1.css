@@ -1,0 +1,53 @@
+
+
+/* Style for the header */
+header {
+    display: flex;
+    justify-content: flex-end; /* Align items to the top right */
+    padding: 20px; /* Add padding to create space */
+  }
+  
+  /* Style for the list of buttons */
+  .header-buttons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  /* Style for the sign-in button */
+  .sign-in-button {
+    background-color: #007BFF; /* Customize the background color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px; /* Add some spacing between buttons */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+  
+    /* Add more styles as needed */
+  }
+  
+  .sign-in-button:hover {
+    background-color: #0056b3; /* Change color on hover */
+  }
+  
+  /* Style for the sign-up button */
+  .sign-up-button {
+    background-color: #28a745; /* Customize the background color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+  
+    /* Add more styles as needed */
+  }
+  
+  .sign-up-button:hover {
+    background-color: #1e7e34; /* Change color on hover */
+  }
+
+ 

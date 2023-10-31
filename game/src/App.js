@@ -9,6 +9,7 @@ import MemoryGame from "./Pages/MemoryGame/MemoryGame";
 import JumpRun from "./Pages/JumpyRunGame/JumpRun";
 import FallingBallGame from "./Pages/FallingBallGame/FallingBallGame";
 import TicTacToeBlind from "./Pages/TicTacToeBlind/TicTacToeBlind";
+import LOG1 from "./Pages/ListofGames1/LOG1";
 
 
 function App() {
@@ -30,7 +31,9 @@ function App() {
       <main className={styles.main}> */}
         {/* <TicTacToe /> */}
         <HomePage/>
+        {/* <LOG1/> */}
       {/* </main> */}
+      
     </div>
   );
 }
