@@ -6,13 +6,17 @@ header {
     justify-content: flex-end; /* Align items to the top right */
     padding: 20px; /* Add padding to create space */
   }
-  
+
   /* Style for the list of buttons */
   .header-buttons {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+  }
+
+  .body{
+    height: 100%;
   }
   
   /* Style for the sign-in button */
@@ -28,6 +32,30 @@ header {
   
     /* Add more styles as needed */
   }
+
+  .imageContainer {
+    height: 100vh; /* Fill the viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+  .titles1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 100px; /* Increase the font size */
+    color: #ffffff; /* Change the text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better readability */
+    padding: 10px 20px; /* Add padding for spacing */
+    background-color: rgba(0, 0, 0, 0.3); /* Add a background color with transparency */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
   
   .sign-in-button:hover {
     background-color: #0056b3; /* Change color on hover */
@@ -50,4 +78,38 @@ header {
     background-color: #1e7e34; /* Change color on hover */
   }
 
+  .gameGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%; /* Ensure grid spans the full width */
+    height: calc(100vh - 150px); /* Adjust based on your needs */
+    overflow-y: auto; /* Scroll only within this container if necessary */
+  }
+  
+  /* Style for the game button */
+  .gameButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gameButton button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gameButton img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  
+  /* Style for the title */
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
  

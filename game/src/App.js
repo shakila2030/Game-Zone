@@ -2,6 +2,7 @@ import React from "react";
 import styles from './App.css';
 
 import HomePage from "./Pages/HomePage/HomePage";
+import SignUpPage from "./Pages/SignUpPage/SignUpPage";
 import TicTacToe from "./Pages/TicTacToe/TicTacToe";
 import MemoryGame from "./Pages/MemoryGame/MemoryGame";
 
@@ -16,8 +17,7 @@ function App() {
   return (
     
 
-    <div 
-    >
+    <div>
     {/* className={styles.container}> */}
 
        {/* Tic Tac Toe game
@@ -30,8 +30,12 @@ function App() {
 
       <main className={styles.main}> */}
         {/* <TicTacToe /> */}
+
         <HomePage/>
-        {/* <LOG1/> */}
+        <SignUpPage/>
+        <LOG1/>
+        
+        
       {/* </main> */}
       
     </div>

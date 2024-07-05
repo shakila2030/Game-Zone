@@ -39,21 +39,38 @@ function LOG1() {
     'Game 9',
   ];
 
+ 
+
+
   return (
     <div
       className={styles.imageContainer}
       style={{
         backgroundImage: `url(${wallpaper})`,
-        marginTop: '0',
-        padding: '0 0 800px 0',
         backgroundPosition: 'top center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        
+        
       }}
     >
       <Header />
+      
       <div>
-        <h1>LIST OF GAMES</h1>
+      <h2
+          style={{
+            textAlign: 'center',
+            margin: '20px 0',
+            fontSize: '3em',
+            color: '#ffffff',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+            padding: '10px 20px',
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            borderRadius: '10px',
+          }}
+        >
+          LIST OF GAMES
+        </h2>
         <div className={styles.gameGrid}>
           {games.map((game, index) => (
             <GameButton key={index} title={game} />
