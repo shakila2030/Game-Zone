@@ -3,6 +3,7 @@ import styles from './App.css';
 
 import HomePage from "./Pages/HomePage/HomePage";
 import SignUpPage from "./Pages/SignUpPage/SignUpPage";
+import SignIn from "./Pages/SignIn/SignIn";
 import TicTacToe from "./Pages/TicTacToe/TicTacToe";
 import MemoryGame from "./Pages/MemoryGame/MemoryGame";
 
@@ -33,6 +34,7 @@ function App() {
 
         <HomePage/>
         <SignUpPage/>
+        <SignIn/>
         <LOG1/>
         
         
