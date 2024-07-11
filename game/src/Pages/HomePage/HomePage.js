@@ -28,23 +28,21 @@ function HomePage() {
     <div
       className={styles.imageContainer}
       style={{
-        // width: "100%", 
-        // height: "100%",
         backgroundImage: `url(${wallpaper})`,
-        marginTop: '0',
-         padding: '0 0 800px 0',
-        backgroundPosition: 'top center', 
+        margin: '0',
+        padding: '0',
+        backgroundPosition: 'top center',
         backgroundSize: 'cover',
-         backgroundRepeat: 'no-repeat',
-    
+        backgroundRepeat: 'no-repeat',
+        minHeight: '100vh', // Ensure it covers the full viewport height
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <h1>game zone</h1>
+
+    <h2 className={styles.shinyTitle }>game zone</h2>
 <div style={{
           display: "flex",
           justifyContent: "center", // Center horizontally
@@ -52,8 +50,10 @@ function HomePage() {
           marginTop: "-30px",
           // height: "100vh", // Adjust the height as needed
         }}>
+
 <div className={styles.animatedButton} >
-</div></div>
+</div>
+</div>
  
       {/* <div className={styles.buttonContainer}>
         <Button

@@ -29,17 +29,15 @@
     ;
   } */
 
-  h1 {
+  .shinyTitle  {
     color: hsl(0, 0%, 28%);
     font-size: 100px!important;
     font-weight: bold!important;
     font-family: monospace;
     letter-spacing: 7px!important;
-    cursor: pointer;
+    /* cursor: pointer; */
     text-transform: uppercase;
-  }
   
-  h1 {
     padding: 64px;
     background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
     -webkit-background-clip: text;
@@ -71,6 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     
   }
   
@@ -104,6 +103,18 @@
     box-shadow: inset 20px 20px 20px #045462;
     
   }
+
+  .animatedButton:hover {
+    transform: scale(1.05); /* Scale the button */
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5); /* Add shadow */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+  }
+  
+  .animatedButton:hover::after {
+    background: #056b74; /* Change background color */
+    box-shadow: inset 20px 20px 20px #056b74; /* Change box-shadow */
+  }
+  
   @keyframes rotate {
     0% {
       transform: rotate(0deg);
