@@ -22,15 +22,33 @@ const SignupPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validate(formData);
     if (Object.keys(newErrors).length === 0) {
-      console.log('Form data submitted:', formData);
+      try {
+        const response = await fetch('http://localhost:3000/signup', { // Ensure this URL matches your backend server's URL
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+        if (response.ok) {
+          console.log('User registered successfully');
+          // You can add code here to handle successful registration, e.g., redirecting to a login page
+        } else {
+          console.error('Failed to register user');
+          // You can handle errors here if needed
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
     } else {
       setErrors(newErrors);
     }
   };
+  
 
   const validate = (data) => {
     const newErrors = {};
