@@ -6,10 +6,8 @@ const SignupPage = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    age: '',
     email: '',
-    password: '',
-    confirmPassword: ''
+    password: ''
   });
 
   const [errors, setErrors] = useState({});
@@ -27,7 +25,7 @@ const SignupPage = () => {
     const newErrors = validate(formData);
     if (Object.keys(newErrors).length === 0) {
       try {
-        const response = await fetch('http://localhost:3000/signup', { // Ensure this URL matches your backend server's URL
+        const response = await fetch('http://localhost:3000/users', { // Ensure this URL matches your backend server's URL
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
