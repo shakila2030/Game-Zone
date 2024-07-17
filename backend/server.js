@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const dotenv = require('dotenv');
 const userRoutes = require('./routes/user');
@@ -15,6 +16,7 @@ mongoose.connect(process.env.MONGO_URI, {
   .catch(err => console.error('MongoDB connection error:', err));
   
   app.use(express.json());
+  app.use(cors()); // Use the CORS middleware
   app.use('/users', userRoutes);
   
 
