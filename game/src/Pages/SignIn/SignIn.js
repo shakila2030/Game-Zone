@@ -18,27 +18,36 @@ const SignInPage = () => {
     });
   };
 
+  const [successMessage, setSuccessMessage] = useState('');
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validate(formData);
     if (Object.keys(newErrors).length === 0) {
       try {
-        const response = await fetch('http://localhost:3000/signin', { // Ensure this URL matches your backend server's URL
+        const response = await fetch('http://localhost:3000/users/signin', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(formData)
         });
+
         if (response.ok) {
-          console.log('User signed in successfully');
-          // You can add code here to handle successful sign-in, e.g., redirecting to a dashboard
+          const data = await response.json();
+          console.log('User signed in successfully', data);
+          setSuccessMessage('User signed in successfully');
+          // Store the token if received
+          localStorage.setItem('token', data.token);
+          // Redirect to a dashboard or another page
         } else {
-          console.error('Failed to sign in');
-          // You can handle errors here if needed
+          const errorData = await response.json();
+          console.error('Failed to sign in', errorData);
+          setErrors({ general: 'Failed to sign in. Please check your credentials.' });
         }
       } catch (error) {
         console.error('Error:', error);
+        setErrors({ general: 'An error occurred. Please try again later.' });
       }
     } else {
       setErrors(newErrors);
